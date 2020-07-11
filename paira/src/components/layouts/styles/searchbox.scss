@@ -1,0 +1,58 @@
+.navbar__search{
+	min-width: 300px;
+	max-width:600px;
+	border:none;
+	position: relative;
+	.ant-input-group{
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		&-addon{
+			position: absolute;
+			width: 96px;
+			right:33px;
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 1;
+			border: none;
+			border-left:1px solid #d9d9d9;
+		}
+		//to override input text box style
+		.ant-input-affix-wrapper{
+			border-radius: 16px;
+			//padding for input text box
+			> .ant-input{
+				padding-left:6px;
+				padding-right:114px;
+			}
+		}
+	}
+	//selection
+	&__select {
+		margin:0;
+		display: flex;
+		flex-grow: 1;
+		.ant-select-selector{
+			padding: 0;
+		}
+	}
+	@media screen and (max-width: 800px){
+		&:not(:focus-within){
+			min-width: 120px;
+			.ant-input-group{
+				&-addon{
+					@media screen and (max-width: 650px){
+						display: none;
+					}
+				}
+				.ant-input-affix-wrapper{
+					& > .ant-input {
+						padding-right: unset;
+					}
+				}
+			}
+		}
+	}
+}

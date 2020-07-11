@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Input, Select } from 'antd';
+import './styles/searchbox.scss';
+
+
 
 const SearchBox = () => {
   const { Search } = Input;
   const { Option } = Select;
-  const optionValues = ['Artwork', 'Designer', 'Gallery'];
+  const optionValues = ['Rescuer', 'Professional', 'Business'];
   const [searchInput, setSearchInput] = useState({ tag: '', type: optionValues[0] });
 
   //todo: implement search logic here.
